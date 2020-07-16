@@ -1,7 +1,7 @@
 {
     "name": "counter",
     "version": "0.1.0",
-    "private": true,
+    "private": false,
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.4.0",
@@ -16,12 +16,17 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
+        "predeploy": "npm run build",
+        "deploy": "exercise-tracker -d build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
+        
     },
     "eslintConfig": {
         "extends": "react-app"
     },
+    "publishConfig": 
+    { "registry": "https://npm.pkg.github.com/" },
     "browserslist": {
         "production": [
             ">0.2%",
@@ -33,5 +38,6 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    }
+    },
+    "homepage": "http://biocell.github.io/exercise-tracker"
 }
